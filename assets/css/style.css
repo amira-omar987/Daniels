@@ -1,0 +1,496 @@
+body {
+  font-family: "Poppins", sans-serif;
+  color: #748182;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Montserrat", sans-serif;
+  color: #343434;
+}
+html {
+  scroll-behavior: smooth;
+}
+:root {
+  --font-size: 3.25rem;
+  --font-weight: 800;
+  --main-color: #343434;
+  --bg-color: #f7f7f7;
+}
+/*  START COMMON STYLES */
+.dot {
+  position: relative;
+}
+.dot::after {
+  position: absolute;
+  content: ".";
+}
+
+h2 {
+  position: relative;
+  display: inline-block;
+  z-index: 2;
+}
+
+.fit-content {
+  width: fit-content;
+}
+/* END COMMON STYLES */
+
+/***********************  START THE NAVBAR  SECTION ********************/
+nav {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+nav .nav-link {
+  color: white;
+  position: relative;
+}
+nav .nav-link:hover {
+  color: white;
+}
+nav .navbar-brand {
+  font-size: 2rem;
+  font-weight: var(--font-weight);
+  padding-left: 20px;
+}
+nav .nav-link.active::after {
+  width: 100%;
+}
+nav .nav-link::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 3px;
+  background-color: white;
+  transition: 0.5s ease;
+}
+
+nav .nav-link:hover::after {
+  width: 100%;
+}
+
+/***********************  END THE NAVBAR  SECTION ********************/
+
+/***********************  START  THE HEADER  SECTION ********************/
+#home {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../imgs/bg.jpg") no-repeat center center fixed;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+#home h2 {
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+#home p {
+  font-size: 4rem;
+  line-height: 1.5;
+}
+#home .social-links .icons i {
+  cursor: pointer;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border-radius: 50%;
+  font-size: 1.25rem;
+}
+
+/***********************  END  THE HEADER  SECTION ********************/
+
+/*********************** START    THE ABOUT   SECTION ********************/
+
+#about h5 {
+  color: #9f99a3;
+}
+
+#about h2 {
+  font-size: 2.5rem;
+}
+#about .me {
+  font-weight: var(--font-weight);
+}
+
+#about .about-img {
+  position: relative;
+  z-index: 2;
+}
+
+#about .img-layer {
+  position: absolute;
+  width: 100%;
+  height: 90%;
+  top: 90px;
+  left: -40px;
+  background-image: url(../imgs/dots.png);
+  background-repeat: repeat;
+  z-index: -1;
+}
+
+#about .progress {
+  position: relative;
+  background-color: black;
+  z-index: 1;
+}
+
+#about h6 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: white;
+  z-index: 5;
+  font-size: 3rem;
+}
+
+#about .progress {
+  background-color: #f7f7f7;
+  --bs-progress-height: 1.5rem;
+  --bs-progress-font-size: 2.5rem;
+  --bs-progress-bg: var(--bs-secondary-bg);
+  box-shadow: inset rgba(255, 255, 255, 0.8);
+  --bs-progress-bar-color: #fff;
+  --bs-progress-bar-bg: #0d6efd;
+  --bs-progress-bar-transition: width 0.6s ease;
+  font-size: 1rem;
+}
+#about .progress-bar {
+  background-color: black;
+  box-shadow: inset rgba(255, 255, 255, 0.8);
+}
+
+#about .btn-download {
+  --bs-btn-padding-x: 1.25rem;
+  --bs-btn-padding-y: 0.4375rem;
+
+  --bs-btn-font-size: 1.125rem;
+  --bs-btn-font-weight: 400;
+  --bs-btn-line-height: 1.5;
+
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #000;
+  --bs-btn-border-color: #000;
+  --bs-btn-hover-color: #000;
+  --bs-btn-hover-bg: #fff;
+  --bs-btn-hover-border-color: #000;
+  --bs-btn-focus-shadow-rgb: 49, 132, 253;
+}
+
+#about .btn-contact {
+  --bs-btn-padding-x: 1.25rem;
+  --bs-btn-padding-y: 0.4375rem;
+
+  --bs-btn-font-size: 1.125rem;
+  --bs-btn-font-weight: 400;
+  --bs-btn-line-height: 1.5;
+
+  --bs-btn-color: #000;
+  --bs-btn-bg: #fff;
+  --bs-btn-border-color: #000;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #000;
+  --bs-btn-hover-border-color: #000;
+  --bs-btn-focus-shadow-rgb: 49, 132, 253;
+}
+
+/***********************  END    THE  ABOUT     SECTION ********************/
+
+/***********************  START  THE  SERVICES    SECTION ********************/
+#services {
+  background-color: var(--bg-color);
+}
+#services h2 {
+  font-size: var(--font-size);
+}
+
+#services h2 {
+  position: relative;
+  display: inline-block;
+  z-index: 2;
+}
+
+#services h2::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 25px;
+  bottom: 40px;
+  background-image: url(../imgs/dots.png);
+  left: 0;
+  background-repeat: repeat;
+  z-index: -1;
+}
+
+#services h5 {
+  color: black;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+#services .icons i {
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 50%;
+  background-color: var(--bg-color);
+  font-size: 2rem;
+  color: var(--main-color);
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+#services .icons i:hover {
+  color: #eeeeee;
+  background-color: #1c1c1c;
+}
+
+/***********************   END    THE  SERVICES    SECTION ********************/
+
+/***********************   START THE PORTFOLIO    SECTION ********************/
+#portfolio h2 {
+  font-size: var(--font-size);
+  position: relative;
+  display: inline-block;
+  z-index: 2;
+}
+
+#portfolio h2::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 25px;
+  bottom: 40px;
+  background-image: url(../imgs/dots.png);
+  left: 0;
+  background-repeat: repeat;
+  z-index: -1;
+}
+
+#portfolio .nav-pills .nav-link {
+  color: black;
+  font-size: 1.5rem;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+#portfolio .nav-pills .nav-link.active:hover {
+  color: black;
+  background-color: blue;
+}
+
+#portfolio .port-info .layer {
+  background: transparent;
+  inset: 0;
+  position: absolute;
+  transition: background-color 0.9s ease, border-color 0.9sec ease,
+    border-width 0.9s ease, border-style 0.9s ease;
+}
+#portfolio .port-info .layer:hover {
+  background-color: white;
+  border-color: #d7d5d6;
+  border-width: 5px;
+  border-style: solid;
+}
+
+#portfolio .port-info .description {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: transparent;
+  transition: all 0.5s ease;
+}
+#portfolio .port-info:hover .description {
+  top: 50%;
+  left: 50%;
+  color: black;
+}
+#portfolio .description {
+  font-size: 1.25rem;
+  color: black;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+#portfolio .port-info .description .icons {
+  transition: all 0.5s ease;
+  color: transparent;
+}
+
+#portfolio .port-info:hover .description .icons i {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: black;
+  border-radius: 50%;
+  color: white;
+}
+
+/***********************  END THE PORTFOLIO    SECTION ********************/
+
+/***********************  START  THE TESTIMONIALS SECTION ********************/
+#test {
+  background-color: var(--bg-color);
+}
+
+#test h2 {
+  font-size: var(--font-size);
+  position: relative;
+  display: inline-block;
+  z-index: 2;
+}
+
+#test h2::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 25px;
+  bottom: 40px;
+  background-image: url(../imgs/dots.png);
+  left: 0;
+  background-repeat: repeat;
+  z-index: -1;
+}
+
+#test .test-contact img {
+  width: 100px;
+  height: 100px;
+}
+.carousel-indicators [data-bs-target] {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: #869791;
+}
+
+.lll {
+  position: relative;
+  display: inline-block;
+  z-index: 4;
+}
+
+/***********************  END    THE TESTIMONIALS    SECTION ********************/
+/***********************  START  THE  COUNTER   SECTION ********************/
+
+#counter .icons i {
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 50%;
+
+  font-size: 2rem;
+  color: var(--main-color);
+}
+/*********************** END   THE  COUNTER   SECTION ********************/
+
+/*********************** START THE TEAM   SECTION ********************/
+#team {
+  background-color: var(--bg-color);
+}
+#team h2 {
+  font-size: var(--font-size);
+  position: relative;
+  display: inline-block;
+  z-index: 2;
+}
+
+#team h2::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 25px;
+  bottom: 40px;
+  background-image: url(../imgs/dots.png);
+  left: 0;
+  background-repeat: repeat;
+  z-index: -1;
+}
+
+#team .card {
+  position: relative;
+  overflow: hidden;
+}
+
+#team .card-body {
+  background-color: black;
+  color: white;
+}
+
+#team .card-overlay {
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 105px;
+  background-color: rgba(255, 255, 255, 0.5);
+  position: absolute;
+}
+
+#team .card-overlay .icons i {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: rgba(0, 0, 0, 0.9);
+  border-radius: 50%;
+  font-size: 1.25rem;
+  transition: all 0.5s ease;
+}
+
+#team .card-overlay .icons i:hover {
+  background-color: #fff;
+  color: black;
+  border: 1px solid black;
+}
+#team .card:hover img {
+  transition: transform 0.5s ease;
+}
+#team .card:hover img {
+  transform: scale(1.1);
+}
+
+/*********************** END THE TEAM   SECTION ********************/
+
+/*********************** START  THE CONTACT SECTION ********************/
+#contact h2 {
+  font-size: var(--font-size);
+  position: relative;
+  display: inline-block;
+  z-index: 2;
+}
+#contact h2::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 25px;
+  bottom: 40px;
+  background-image: url(../imgs/dots.png);
+  left: 0;
+  background-repeat: repeat;
+  z-index: -1;
+}
+
+#contact .icons i {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-color: var(--bg-color);
+  font-size: 2rem;
+  color: var(--main-color);
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+#contact .icons i:hover {
+  background-color: var(--main-color);
+  color: white;
+}
+#contact button {
+  background-color: black;
+  color: white;
+  transition: color 0.5s ease, background-color 0.5s ease, border 0.5s ease;
+}
+#contact button:hover {
+  color: black;
+  background-color: white;
+  border: 2px solid black;
+}
+#contact .form-control {
+  background-color: var(--bg-color);
+  border: none;
+}
+/*********************** END  THE CONTACT SECTION ********************/
